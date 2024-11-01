@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h5 class="phone">Phone Number: +880 1721336504</h5>
+    <h5 class="phone">Email: ahsan.natore@gmail.com</h5>  
+    <a class="log" href="login.html" target="_blank">LOGIN</a>
+    <a class="sin" href="signup.html" target="_blank">SIGNUP</a>
+  </div> 
+      
+
+      <div class="navbar">
+        
+          <a href="https://veshozvillage.com/">
+            <img src="vv.png" height="40" width="140"></a>
+          <a class="home" href="index.html">HOME</a>
+          <a class="home" href="about.html" target="_blank">ABOUT US</a>
+          <a class="home" href="shop.html" target="_blank">SHOP</a>
+          <a class="home" href="contact.html">CONTACT US</a>
+        
+      </div>
+
+
+<form method="" action="" enctype="multipart/form-data">
+    
+    <div class="signup">
+        <h3 class="rgf">Registration Form</h3>
+        <div class="form-group">
+            <label for="name">Name(English):[<span style="color: red;">*</span>]</label>
+            <input class="input-field" type="text" id="name" placeholder="Name (English)" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Address Line 1:[<span style="color: red;">*</span>]</label>
+          <input type="text" id="name" class="input-field" placeholder="Address Line 1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Address Line 2:</label>
+          <input type="text" id="name" class="input-field" placeholder="Address Line 2">
+        </div>
+
+      <div class="form-group">
+        <label for="name">Gender:[<span style="color: red;">*</span>]</label>
+        <select class="input-field" required>
+          <option>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Others</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Date of Birth:[<span style="color: red;">*</span>]</label>
+        <input type="date" id="date" class="input-field" placeholder="Date of Birth" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Mobile No.:</label>
+        <input type="tel" id="phone" class="input-field" placeholder="Enter Your Mobile No.">
+      </div>
+
+        <div class="form-group">
+            <label for="email">Email as UserID:[<span style="color: red;">*</span>]</label>
+            <input type="email" id="email" class="input-field" placeholder="Enter Your Email address" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:[<span style="color: red;">*</span>]</label>
+            <input type="password" id="password" class="input-field" placeholder="Enter Your Password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Confirm Password:[<span style="color: red;">*</span>]</label>
+          <input type="password" id="password" class="input-field" placeholder="Confirm Your Password" required>
+      </div>
+      <div class="form-group" onsubmit="return validateCaptcha()">
+        <label for="captcha-input">Enter CAPTCHA:[<span style="color: red;">*</span>]</label>
+        <input class="input-field" type="text" id="captcha-input" placeholder="Please type the text" required>
+      </div>
+
+      <div class="captcha-container">
+        <span id="captcha"></span>
+        <button onclick="generateCaptcha()">Refresh CAPTCHA</button>
+      </div>
+
+      <div class="form-group">
+      <input style="margin: 10px 10px;" type="checkbox" id="" name="">I read and agreed all <b>Trms and Conditions</b>
+      </div>
+
+      <div style="margin-left: 10px;">
+        <button class="submit" type="submit">Register</button>
+        <a style="margin-left: 8px;" href="login.html" target="_blank">Back to Login</a>
+      </div>
+<script>
+  let captchaCode = "";
+
+  // Function to generate a random CAPTCHA code
+  function generateCaptcha() {
+      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      captchaCode = "";
+      for (let i = 0; i < 6; i++) {
+          captchaCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      document.getElementById("captcha").textContent = captchaCode;
+  }
+
+  // Function to validate CAPTCHA
+  function validateCaptcha() {
+      const userCaptcha = document.getElementById("captcha-input").value;
+      if (userCaptcha === captchaCode) {
+          alert("CAPTCHA verified successfully!");
+          return true;
+      } else {
+          document.getElementById("captcha-status").textContent = "Incorrect CAPTCHA. Please try again.";
+          generateCaptcha(); // Refresh CAPTCHA on incorrect input
+          return false;
+      }
+  }
+
+  // Initialize CAPTCHA on page load
+  window.onload = generateCaptcha;
+</script>
+    </div>
+</form>
+    
+  
+</body>
+</html>
