@@ -141,6 +141,32 @@ label {
     background-color: rgb(192, 153, 228);
    padding-top: 3px;
 }
+.about{
+    margin: 5px 50px ;
+    text-decoration: underline;
+}
+/* .cont{
+    height: 300px;
+    width: 700px;
+    background-color: rgb(48, 7, 171);
+} */
+.para{
+    height: 200px;
+    width: 800px;
+    background-color: rgb(114, 190, 225);
+    margin: 5px 50px;
+    padding-top: 15px;
+    border-radius: 3px;
+    
+}
+.parag{
+    margin: 15px 50px 50px 50px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+    /* display: inline-block; */
+
+}
 .container{
     background-color: rgb(197, 197, 113);
     height: 370px;
@@ -150,6 +176,14 @@ label {
     /* margin-left: 10px; */
     
 }
+.containers{
+    background-color: rgb(197, 197, 113);
+    height: 710px;
+    width: 990px;
+    margin: auto;
+    margin-top: 10px;
+}
+
 .heading{
     margin-top: 10px 10px;
     padding-top: 10px;
@@ -209,8 +243,74 @@ label {
     box-sizing: border-box;
     border: 1px solid black;
 }
+
 .additema{
     text-decoration: none;
     font-size: 18px;
     padding: 8px 8px;
+}
+
+.seemore{
+    background-color: rgb(148, 203, 227);
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 5px 5px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.read{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+   
+}
+.loginform{
+    background-color: rgb(111, 217, 217);
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.lrgf{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.inputfield{
+    height: 50px;
+    width: 350px; /* Adjust input field width as needed */
+    padding: 10px 10px;
+    margin:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.ckbox{
+    margin: 0;
+    margin-left: 80px;
+    padding: 3px 3px;
+}
+.signinbtn{
+    margin-left: 200px;
+    display: block;;
+}
+.dont{
+    
+    margin-left: 130px;
+    font-size: 15px;
+    
 }
